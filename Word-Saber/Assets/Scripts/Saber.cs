@@ -5,17 +5,16 @@ using TMPro;
 
 public class Saber : MonoBehaviour
 {
+
+    [SerializeField] TargetWordInstantiate TargetWordCreator;// Getting reference to our TargetWordInstantiate Script for the saber to pass the collided letter tag into the letter checker method
+                                                             // on the target word instantiator script
+   
     
-    [SerializeField] TMP_Text [] TargetLetters;
-    [SerializeField] ScreenScript Scriptholder;
-    private int WordScore;
-    
-    
+
     void Start()
     {
-        
+       
     }
-
     
     void Update()
     {
@@ -24,47 +23,13 @@ public class Saber : MonoBehaviour
         if (Physics.Raycast(transform.position,transform.forward, out RaycastHit hit, 2))
         {
             Collider Collider = hit.collider;
-            
-            foreach (TMP_Text letterbox in TargetLetters)
-            {
-                if (Collider.tag == letterbox.text)
-                {
-                    letterbox.color = Color.black;
-                    Scriptholder.Scorer();
-                    WordCompletionChecker();
-
-                }
-
-                else
-                {
-                    Scriptholder.ScorePenalty();
-                }
-            }
-
+            TargetWordCreator.LetterChecker(Collider.tag);
             Destroy(Collider.gameObject);
 
         }
+       
 
-        
+
     }
-    // if (all letterboxes are of color.black then end game)
     
-    public void WordCompletionChecker()
-    {
-        WordScore = 0; 
-
-        foreach (TMP_Text letterbox in TargetLetters)
-        {
-            if (letterbox.color == Color.black)
-            {
-                WordScore += 1;
-            }
-        }
-
-        if (WordScore == TargetLetters.Length) // Check maybe .Length + 1 works
-
-        {
-            Scriptholder.GameSuccess();
-        }
-    }
 }

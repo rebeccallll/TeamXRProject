@@ -5,16 +5,18 @@ using TMPro;
 
 public class ScreenScript : MonoBehaviour
 {
-
+    //Game Controller script
     [SerializeField] TextMeshPro TimeBox;
     [SerializeField] TextMeshPro TargetWordTitle;
     [SerializeField] TextMeshPro TimerTitle;
     [SerializeField] GameObject Spawner;
-    public float GameTime = 60f;
+
+
+    public float GameTime = 600f;
     private bool IsPlaying = false;
     private float CurrentTime;
-    public float BonusTime = 20f;
-    public float NegativeTime = 10f;
+    public float BonusTime = 200f;
+    public float NegativeTime = 5f;
 
 
 
@@ -26,6 +28,8 @@ public class ScreenScript : MonoBehaviour
     {
         IsPlaying = true;
         CurrentTime = GameTime;
+
+
     }
 
     // Update is called once per frame
@@ -50,7 +54,7 @@ public class ScreenScript : MonoBehaviour
         }
     }
 
-    public void Scorer()
+    public void ScoreBonus()
     {
         CurrentTime += BonusTime;
     }

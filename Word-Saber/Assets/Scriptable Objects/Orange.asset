@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549e370583f10254783144a8f6a5f267, type: 3}
+  m_Name: Orange
+  m_EditorClassIdentifier: 
+  WordName: Mango
+  LettersintheWord:
+  - {fileID: 7706623291030923593, guid: e28f766a30dfefd42b331bbd1d04706e, type: 3}
+  - {fileID: 5432999675888561254, guid: 0592bbaef1a09a34694b91d2bc36343c, type: 3}
+  - {fileID: 8675967576553376984, guid: ad879bb203ef3cc45854bb8f8ce74140, type: 3}
+  - {fileID: 3388815284425189465, guid: 80d86aedfe645b54cbf85a8b1bc31d61, type: 3}
+  - {fileID: 4975778561172106451, guid: d2a119906f251a44ca35563f3820cbe7, type: 3}
+  - {fileID: 3263753003718699816, guid: a555ec284cfea5741aeb98c8828c79db, type: 3}
